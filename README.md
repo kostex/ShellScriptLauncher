@@ -1,5 +1,5 @@
 # Kodi Shell Script Launcher
-
+# (Forked and added menus to set some files readonly/writable)
 ## Kodi Addon: Shell Script Executor
 
 This Kodi addon allows users to execute shell scripts or commands directly from the Kodi interface.
