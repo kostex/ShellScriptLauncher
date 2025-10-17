@@ -68,8 +68,10 @@
 
 # Make some settings read only (add others at will)
 ReadOnly GUI::/bin/chmod -w ~/.kodi/userdata/guisettings.xml
-ReadOnly SKIN::/bin/chmod -w ~/.kodi/userdata/addon_data/skin.estuary/settings.xml
+ReadOnly SKIN ESTUARY::/bin/chmod -w ~/.kodi/userdata/addon_data/skin.estuary/settings.xml
+ReadOnly ALL SKINS::/bin/chmod -w ~/.kodi/userdata/addon_data/skin.*/settings.xml
 
 # Make some settings writable (add others at will)
 Writable GUI::/bin/chmod +w ~/.kodi/userdata/guisettings.xml
-Writable SKIN::/bin/chmod +w ~/.kodi/userdata/addon_data/skin.estuary/settings.xml
+Writable SKIN ESTUARY::/bin/chmod +w ~/.kodi/userdata/addon_data/skin.estuary/settings.xml
+Writable ALL SKINS::/bin/chmod +w ~/.kodi/userdata/addon_data/skin.*/settings.xml
