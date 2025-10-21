@@ -1,21 +1,14 @@
 # Kodi Shell Script Launcher - Menu Example File
 #
 # For the help and standard examples: https://github.com/wastis/ShellScriptLauncher/blob/master/example.menu
+# I can't get wildcards to work so I had to find a way around it.. not very efficient..
 
+# Make settings read only
+ReadOnly USERDATA:show:/bin/chmod -w ~/.kodi/userdata/RssFeeds.xml ~/.kodi/userdata/decoderfilter.xml ~/.kodi/userdata/favourites.xml ~/.kodi/userdata/guisettings.xml ~/.kodi/userdata/mediasources.xml ~/.kodi/userdata/passwords.xml ~/.kodi/userdata/profiles.xml ~/.kodi/userdata/sources.xml
+ReadOnly ADDON_DATA:show:/bin/chmod -R -w ~/.kodi/userdata/addon_data
+ReadOnly KEYMAPS:show:/bin/chmod -R -w ~/.kodi/userdata/keymaps
 
-# Make most settings read only (add others at will by adding them to the end or creating a new entry)
-ReadOnly USERDATA/SKINS/PLUGINS::/bin/chmod -w ~/.kodi/userdata/*.xml ~/.kodi/userdata/addon_data/skin.*/settings.xml ~/.kodi/userdata/addon_data/plugin.*/settings.xml
-ReadOnly KEYMAPS::/bin/chmod -w ~/.kodi/userdata/keymaps/*
-
-# Make most settings writable (add others at will by adding them to the end or creating a new entry)
-Writable USERDATA/SKINS/PLUGINS::/bin/chmod +w ~/.kodi/userdata/*.xml ~/.kodi/userdata/addon_data/skin.*/settings.xml ~/.kodi/userdata/addon_data/plugin.*/settings.xml
-Writable KEYMAPS::/bin/chmod +w ~/.kodi/userdata/keymaps/*
-
-
-# There is no way for me to know what more files you would want to make readonly.
-# Goto FileManager (in Estuary Skin or any other skin that has this function) and look in "Profile directory"
-# Any files/folders you want to have readonly, just add them like this:
-# NAMEOFENTRY::/bin/chmod -w FILES/DIRS
-# examples:
-# ReadOnly MUSIC Playlists::/bin/chmod -w ~/.kodi/userdata/playlists/music/*
-# Writable MUSIC Playlists::/bin/chmod +w ~/.kodi/userdata/playlists/music/*
+# Make settings writable
+Writable USERDATA:show:/bin/chmod +w ~/.kodi/userdata/RssFeeds.xml ~/.kodi/userdata/decoderfilter.xml ~/.kodi/userdata/favourites.xml ~/.kodi/userdata/guisettings.xml ~/.kodi/userdata/mediasources.xml ~/.kodi/userdata/passwords.xml ~/.kodi/userdata/profiles.xml ~/.kodi/userdata/sources.xml
+Writable ADDON_DATA:show:/bin/chmod -R +w ~/.kodi/userdata/addon_data
+Writable KEYMAPS:show:/bin/chmod -R +w ~/.kodi/userdata/keymaps
