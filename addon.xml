@@ -7,7 +7,7 @@
 		<provides>executable</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<platform>android</platform>
+		<platform>android linux</platform>
 		<summary lang="en">Run Shell Scripts via a Menu</summary>
 		<summary lang="de_DE">Shell-Skripte über ein Menü ausführen</summary>
 		<description lang="en">
