@@ -4,10 +4,12 @@
 
 
 # Make most settings read only (add others at will by adding them to the end or creating a new entry)
-ReadOnly USERDATA/SKINS/PLUGINS/KEYMAPS::/bin/chmod -w ~/.kodi/userdata/*.xml ~/.kodi/userdata/addon_data/skin.*/settings.xml ~/.kodi/userdata/addon_data/plugin.*/settings.xml ~/.kodi/userdata/keymaps/*.xml
+ReadOnly USERDATA/SKINS/PLUGINS::/bin/chmod -w ~/.kodi/userdata/*.xml ~/.kodi/userdata/addon_data/skin.*/settings.xml ~/.kodi/userdata/addon_data/plugin.*/settings.xml
+ReadOnly KEYMAPS::/bin/chmod -w ~/.kodi/userdata/keymaps/*
 
 # Make most settings writable (add others at will by adding them to the end or creating a new entry)
-Writable USERDATA/SKINS/PLUGINS/KEYMAPS::/bin/chmod +w ~/.kodi/userdata/*.xml ~/.kodi/userdata/addon_data/skin.*/settings.xml ~/.kodi/userdata/addon_data/plugin.*/settings.xml ~/.kodi/userdata/keymaps/*.xml
+Writable USERDATA/SKINS/PLUGINS::/bin/chmod +w ~/.kodi/userdata/*.xml ~/.kodi/userdata/addon_data/skin.*/settings.xml ~/.kodi/userdata/addon_data/plugin.*/settings.xml
+Writable KEYMAPS::/bin/chmod +w ~/.kodi/userdata/keymaps/*
 
 
 # There is no way for me to know what more files you would want to make readonly.
