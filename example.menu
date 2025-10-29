@@ -4,11 +4,13 @@
 # I can't get wildcards to work so I had to find a way around it.. not very efficient..
 
 # Make settings read only
+ReadOnly ESTUARYSKIN:show:/bin/chmod -w ~/.kodi/userdata/addon_data/skin.estuary/settings.xml
 ReadOnly USERDATA:show:/bin/chmod -w ~/.kodi/userdata/RssFeeds.xml ~/.kodi/userdata/decoderfilter.xml ~/.kodi/userdata/favourites.xml ~/.kodi/userdata/guisettings.xml ~/.kodi/userdata/mediasources.xml ~/.kodi/userdata/passwords.xml ~/.kodi/userdata/profiles.xml ~/.kodi/userdata/sources.xml
 ReadOnly ADDON_DATA:show:/bin/chmod -R -w ~/.kodi/userdata/addon_data
 ReadOnly KEYMAPS:show:/bin/chmod -R -w ~/.kodi/userdata/keymaps
 
 # Make settings writable
+Writable ESTUARYSKIN:show:/bin/chmod +w ~/.kodi/userdata/addon_data/skin.estuary/settings.xml
 Writable USERDATA:show:/bin/chmod +w ~/.kodi/userdata/RssFeeds.xml ~/.kodi/userdata/decoderfilter.xml ~/.kodi/userdata/favourites.xml ~/.kodi/userdata/guisettings.xml ~/.kodi/userdata/mediasources.xml ~/.kodi/userdata/passwords.xml ~/.kodi/userdata/profiles.xml ~/.kodi/userdata/sources.xml
 Writable ADDON_DATA:show:/bin/chmod -R +w ~/.kodi/userdata/addon_data
 Writable KEYMAPS:show:/bin/chmod -R +w ~/.kodi/userdata/keymaps
